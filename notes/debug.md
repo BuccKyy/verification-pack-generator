@@ -1,88 +1,43 @@
-# Debug Trail: Verification Pack Generator
+# Debug Trail
 
-## Failure #1: Negation Mismatch Causes False SUPPORTED
+## Bug: False SUPPORTED on negation
 
-### Observed Failure
+Found a tricky bug in Q03. The claim said headnotes "may be cited" but the evidence said "Do not cite headnotes" - yet the system marked it SUPPORTED.
 
-**Question Q03, Claim #3:**
+### What happened
+
+The claim:
 ```
-Claim: "Headnotes may be cited as a substitute for reading the judgment text."
-```
-
-**Before fix output:**
-```json
-{
-  "claim": "Headnotes may be cited as a substitute for reading the judgment text.",
-  "label": "SUPPORTED",
-  "evidence": [{
-    "doc_id": "doc03",
-    "location": "L005",
-    "snippet": "Do not cite headnotes as a substitute for reading the judgment text."
-  }]
-}
+Headnotes may be cited as a substitute for reading the judgment text.
 ```
 
-### Diagnosis
+Got matched to this evidence:
+```
+Do not cite headnotes as a substitute for reading the judgment text. 
+```
 
-The claim asserts that headnotes **may** be cited, but the evidence says "**Do not** cite headnotes". The system incorrectly labeled this as SUPPORTED because:
+Problem was the word overlap was high enough (headnotes, cite, substitute, judgment, text) that it passed the 40% threshold. But obviously they mean opposite things.
 
-1. High term overlap (headnotes, cite, substitute, judgment, text) → passes 40% threshold
-2. Negation detection failed: claim has no negation words from the simple list
-3. BUT the evidence has "Do not" which completely contradicts the claim
+### The fix
 
-**Root cause:** The `_check_support()` method only checks for presence of explicit negation words (not, never, etc.) but doesn't detect when:
-- Claim is affirmative ("may be cited")
-- Evidence is negative ("Do **not** cite")
+Added detection for prohibition patterns like "do not", "must not", etc. If the evidence has these patterns but the claim doesn't have negation, we return NOT_SUPPORTED.
 
-### Fix Applied
-
-Enhanced negation detection in `_check_support()` to:
-1. Detect "do not", "must not", "should not" patterns
-2. Compare claim polarity (affirmative vs. negative)
-3. If claim is affirmative but evidence is prohibitive → NOT_SUPPORTED
-
-**Code change in `run.py`:**
 ```python
-# Added to _check_support method:
-# Detect prohibitive patterns in evidence
-prohibitive_patterns = [r'\bdo not\b', r'\bmust not\b', r'\bshould not\b', r'\bprohibited\b']
-evidence_prohibits = any(re.search(p, evidence_lower) for p in prohibitive_patterns)
+prohibition_patterns = [r'\bdo not\b', r'\bmust not\b', r'\bshould not\b', ...]
+ev_prohibits = any(re.search(p, ev_low) for p in prohibition_patterns)
 
-# If evidence prohibits something the claim asserts, it's NOT_SUPPORTED
-if evidence_prohibits and not claim_has_negation:
-    # Check if claim is asserting the prohibited action
-    if overlap_ratio >= 0.3:
-        return "NOT_SUPPORTED"
+if ev_prohibits and not claim_negated and overlap_pct >= 0.3:
+    return "NOT_SUPPORTED"
 ```
 
-### After Fix Output
+Also added check for numeric mismatches (eg "7 days" vs "3 days").
 
-```json
-{
-  "claim": "Headnotes may be cited as a substitute for reading the judgment text.",
-  "label": "NOT_SUPPORTED",
-  "evidence": [{
-    "doc_id": "doc03",
-    "location": "L005",
-    "snippet": "Do not cite headnotes as a substitute for reading the judgment text."
-  }]
-}
-```
+### Result
 
-### Similar Cases Fixed
+Before: 8 false SUPPORTED cases
+After: fixed those, now correctly marking as NOT_SUPPORTED
 
-- **Q01, Claim #4:** "7 working days" vs evidence "3 working days" → Now NOT_SUPPORTED
-- **Q02, Claim #3:** "allows external AI tools" vs evidence "prohibited" → Now NOT_SUPPORTED
-- **Q10, Claim #3:** "may input confidential data" vs evidence "must not input" → Now NOT_SUPPORTED
-
----
-
-## Summary
-
-| Metric | Before | After |
-|--------|--------|-------|
-| False SUPPORTED | ~8 | 0 |
-| Correctly NOT_SUPPORTED | 7 | 15 |
-| INSUFFICIENT | 7 | 7 |
-
-The fix improves precision by correctly identifying contradictions between affirmative claims and prohibitive evidence.
+Similar bugs fixed:
+- Q01: "7 working days" vs "3 working days" 
+- Q02: "allows external AI" vs "prohibited"
+- Q10: "may input confidential data" vs "must not input"
