@@ -1,0 +1,13 @@
+Doc 10 — Mock Research Checklist (Quality Control) [PUBLIC MOCK]
+================================================================
+
+L001: For each answer, list every distinct claim being made.
+L002: For each claim, identify at least one supporting passage.
+L003: If no passage supports the claim, mark it as insufficient.
+L004: Do not use related passages as a substitute for direct support.
+L005: Record the retrieval query and top candidates.
+L006: Confirm the authority is current as of the relevant date.
+L007: If authority currency cannot be confirmed, flag it explicitly.
+L008: Prefer pinpoint paragraph references where available.
+L009: If only page references exist, include page and line ranges.
+L010: Produce a short error log of failed or uncertain claims.

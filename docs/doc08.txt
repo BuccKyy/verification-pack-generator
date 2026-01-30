@@ -1,0 +1,13 @@
+Doc 08 — Mock Case Note B (Hearsay & Evidence) [PUBLIC MOCK]
+============================================================
+
+L001: In Public Prosecutor v X, the court discussed hearsay and its exceptions.
+L002: The court noted that an out-of-court statement is not hearsay if it is not tendered for its truth.
+L003: The court explained that purpose of tender is key to the hearsay analysis.
+L004: The court allowed a statement to be admitted for a non-hearsay purpose (effect on listener).
+L005: The court cautioned against labelling all out-of-court statements as hearsay.
+L006: The decision included a brief discussion of reliability and fairness.
+L007: The judgment did not create a new hearsay exception.
+L008: The court referenced statutory provisions on evidence.
+L009: The court ultimately admitted the statement on a limited basis.
+L010: The decision was a first-instance judgment.

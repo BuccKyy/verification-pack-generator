@@ -1,0 +1,13 @@
+Doc 09 — Mock Case Note C (Injunction Test) [PUBLIC MOCK]
+=========================================================
+
+L001: In Applicant A v Respondent B, the court applied a three-part test for interim injunctions.
+L002: First, the court asked whether there was a serious question to be tried.
+L003: Second, the court considered whether damages would be an adequate remedy.
+L004: Third, the court assessed the balance of convenience.
+L005: The court emphasised that the three factors are not rigid boxes.
+L006: The court found a serious question existed on the facts.
+L007: The court held damages were not adequate due to irreparable reputational harm.
+L008: The court found the balance of convenience favoured the applicant.
+L009: The court granted the interim injunction with conditions.
+L010: The judgment noted the respondent could apply to vary the order.

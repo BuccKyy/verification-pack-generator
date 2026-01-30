@@ -1,0 +1,13 @@
+Doc 04 — Mock Memo on Versioning & Authority Currency [PUBLIC MOCK]
+===================================================================
+
+L001: Legal authority is time-sensitive: later amendments and decisions can change the applicable rule.
+L002: A 'current' version must include amendments effective as of the relevant date of events.
+L003: When relying on regulations, confirm commencement dates and savings provisions.
+L004: When relying on case law, confirm whether it has been appealed.
+L005: If the appellate outcome is unknown, treat reliance as provisional.
+L006: Maintain a version log for research that records: source, date accessed, and version identifier.
+L007: For internal knowledge bases, store the commit hash or document revision ID.
+L008: If a citation refers to a repealed section, flag it as invalid.
+L009: If there are conflicting authorities, present both and explain the conflict.
+L010: Never present a single authority as definitive when the law is unsettled.

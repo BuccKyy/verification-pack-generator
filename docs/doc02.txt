@@ -1,0 +1,13 @@
+Doc 02 — Mock Data Handling & Confidentiality Policy [PUBLIC MOCK]
+==================================================================
+
+L001: Confidential Information includes any client documents not publicly available.
+L002: Do not upload Confidential Information to third-party services without written approval.
+L003: Use of external AI tools is prohibited for Confidential Information unless an on-prem deployment is used.
+L004: Access to case materials must follow least-privilege principles.
+L005: Audit logs must record who accessed materials and when.
+L006: Retention of working files should be minimised and aligned with matter requirements.
+L007: If a dataset is created for evaluation, it must be anonymised where feasible.
+L008: Anonymisation must remove names, NRIC numbers, addresses, and other direct identifiers.
+L009: If anonymisation is not feasible, the dataset must remain within a restricted environment.
+L010: Any incident of accidental disclosure must be reported within 24 hours.

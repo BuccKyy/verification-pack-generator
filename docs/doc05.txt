@@ -1,0 +1,13 @@
+Doc 05 — Mock Email Thread Excerpt (Project Scope) [PUBLIC MOCK]
+================================================================
+
+L001: Scope: build a retrieval system that returns pinpoint citations.
+L002: Pinpoint citations must include document ID and a stable location reference.
+L003: Output must include a claim-to-evidence map.
+L004: If evidence is missing, the system should abstain rather than guess.
+L005: The system must log retrieval candidates and scores.
+L006: We will evaluate using citation precision and support accuracy.
+L007: We will not evaluate stylistic writing quality in this phase.
+L008: The pilot will use public or sanitised documents only.
+L009: Timeline: deliver a working prototype in 5 business days.
+L010: Anything beyond that is optional and should be prioritised after correctness.

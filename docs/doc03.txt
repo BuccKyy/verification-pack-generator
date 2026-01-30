@@ -1,0 +1,13 @@
+Doc 03 — Mock Guidance on Citation Accuracy (Legal Research) [PUBLIC MOCK]
+==========================================================================
+
+L001: A citation is accurate only if the cited source supports the specific proposition stated.
+L002: A source that is merely related is not sufficient support.
+L003: When citing cases, cite the relevant paragraph(s) for the proposition.
+L004: If a proposition depends on multiple authorities, cite each authority separately.
+L005: Do not cite headnotes as a substitute for reading the judgment text.
+L006: If the law has changed, older authorities may be of limited value.
+L007: Always check whether the cited authority has been overruled or distinguished.
+L008: For statutes, cite the current consolidated version and the specific section.
+L009: For subsidiary legislation, verify the effective date and amendments.
+L010: If the supporting passage is ambiguous, label the proposition as uncertain.

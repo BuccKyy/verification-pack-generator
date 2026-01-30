@@ -1,0 +1,13 @@
+Doc 06 — Mock 'Terms of Use' for Internal Tooling [PUBLIC MOCK]
+===============================================================
+
+L001: Users must not input client confidential data into non-approved systems.
+L002: Approved systems include on-prem tools and tools with signed data processing agreements.
+L003: The tool should display a confidence or support indicator for each claim.
+L004: Users remain responsible for professional judgment and verification.
+L005: The tool must clearly show when it is uncertain or lacks evidence.
+L006: The tool should provide links or references to underlying sources where possible.
+L007: The tool should store minimal data necessary for functionality.
+L008: Admins must be able to delete indexed content upon request.
+L009: The system must implement role-based access control.
+L010: The system should provide an audit trail for queries and retrieved snippets.

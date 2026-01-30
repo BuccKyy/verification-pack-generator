@@ -1,0 +1,13 @@
+Doc 01 — Mock Court Practice Note (Filing & Bundles) [PUBLIC MOCK]
+==================================================================
+
+L001: All documents filed must be paginated consecutively.
+L002: An index must be included at the front of the bundle.
+L003: Each exhibit should be separated with a tab or electronic bookmark.
+L004: Authorities bundles should include only the pages relied upon.
+L005: Where a party relies on an unreported decision, the full text should be provided.
+L006: The hearing bundle must be submitted no later than 3 working days before the hearing date.
+L007: Sensitive personal data must be redacted unless the court orders otherwise.
+L008: If redaction is applied, a version log must indicate what was redacted and why.
+L009: All references in submissions should cite paragraph numbers where available.
+L010: If paragraph numbers are unavailable, cite page and line numbers.

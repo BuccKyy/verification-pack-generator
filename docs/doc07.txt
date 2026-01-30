@@ -1,0 +1,13 @@
+Doc 07 — Mock Case Note A (Contract Interpretation) [PUBLIC MOCK]
+=================================================================
+
+L001: In Contract Co v Supplier Pte, the court emphasised interpreting the contract as a whole.
+L002: The court stated that context matters, but cannot be used to contradict clear text.
+L003: The court relied on the wording of Clause 7 to determine risk allocation.
+L004: The court rejected an argument based solely on commercial common sense.
+L005: The judgment noted that parties should not rewrite a bad bargain via interpretation.
+L006: The decision did not address remedies for misrepresentation.
+L007: The court cited two earlier authorities on contextual interpretation.
+L008: The court distinguished a prior case where the clause was ambiguous.
+L009: The court concluded Supplier Pte bore the relevant delivery risk.
+L010: The decision was an appellate judgment.
